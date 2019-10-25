@@ -1,0 +1,137 @@
+header{
+    padding: 35px 3.125rem;
+    height: 101px;
+}
+.logo img{
+    width: 215px;
+    height: 29.25px;
+       
+}
+header, .navbar, .social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar li + li{
+    margin-left: 30px;
+}
+.social li + li{
+    margin-left: 15px;
+}
+.social{
+    margin-left: 25px;
+}
+.navcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar li a{
+    font-weight: 600;
+    line-height: 1em;
+    padding: 0;
+    padding: 8px 0;
+    display: block;
+    font-size: 14px;
+
+    color: #415465;
+    text-decoration: none;
+    position: relative;
+}
+.navbar li a:hover::after{
+    height: 15px;
+}
+.navbar li a:after {
+    content: '';
+    position: absolute;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #ffea88;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    z-index: -1;
+    -webkit-transform: none;
+    transform: none;
+ }
+
+.burger-menu{
+    display: none;
+
+}
+@media only screen and (max-width:1024px){
+    .navcontainer{
+        display: none;
+    }
+    body.movil-nav header .navMovil{
+        display: flex;
+        height: 40vh;
+        width: 100%;
+        position: absolute;
+        top: 101px;
+        left: 0;
+        background-color: #415465;
+        z-index: 10;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .3s ease;      
+    }
+    body.movil-nav header .navMovil .social{
+        justify-content: center;
+        margin: 0;
+        margin-top: 20px;
+        
+    }
+    body.movil-nav header .navMovil i{
+        font-size: 22px;
+    }
+    body.movil-nav header .navMovil i, header .navMovil a{
+        color: white;
+    }
+    body.movil-nav header .navMovil .navbar{
+        flex-direction: column;
+        color: white;
+        justify-content: space-between;
+    }
+    body.movil-nav header .navMovil .navbar li{
+        margin: 0;
+        margin-top: 20px;
+    }
+    .burger-menu{
+        display: block;
+        cursor: pointer;
+    }
+    .burger-menu i{
+        display: block;
+        width: 21px;
+        height: 2px;
+        background-color: #415465;
+        transition: all 0.2s ease;
+    }
+
+    .burger-menu i + i {
+        margin-top: 6px;
+    }
+    body.movil-nav header .burger-menu i:nth-of-type(1){
+        opacity: 0;
+    
+    }
+    body.movil-nav header .burger-menu i:nth-of-type(2){
+        transform: rotate(-45deg);
+       
+    
+    }
+    body.movil-nav header .burger-menu i:nth-of-type(3){
+        transform: rotate(45deg);
+        margin-top: -2px;
+    
+    }
+
+}
+@media only screen and (max-width:767px){
+    header{
+        padding: 25px;
+    }
+}
+

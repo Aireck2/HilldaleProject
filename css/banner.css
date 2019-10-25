@@ -1,0 +1,145 @@
+.banner{
+    background-color: #f8f8f8;
+    padding: 0 3.125rem 3.125rem 3.125rem;
+    padding-top: 101px;
+    position: relative
+}
+.green-box{
+    padding-top: 4.6875rem;
+    padding-bottom: 8.125rem;
+    width: calc(40% + 3.125rem);
+    position: relative;
+    left: -3.125rem;
+    z-index: 5;
+    flex: 0 0 auto;
+}
+.green-box__content-box{
+    background: #007367;
+    padding: 4.6875rem;
+
+
+}
+.green-box__content-box h2{
+    font-weight: 600;
+    font-size: 3.60rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+}
+.green-box__content-box p{
+    color: #fff;
+    font-size: 1.4em;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.green-box__content-box .btn{
+    color: #007367;
+    min-width: 200px;
+    height: 45px;
+    padding: 10px 20px;
+    line-height: 1em;
+    word-spacing: 1rem;
+    background: #b9d8ea;
+    font-weight: bolder;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+
+}
+.green-box__content-box .btn:hover{
+    background: #ffea88;
+    color: #415465;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+.banner-wrap{
+    display: flex;
+   align-items: stretch;
+}
+.banner-images{
+    width: 1082px;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    opacity: 1;
+}
+.banner-images__center img{
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.f-yellow{
+    position: absolute;
+    z-index: 4;
+    left: -3.125rem;
+    bottom: -3.125rem;
+    width: 54%;
+    height: auto;
+}
+.f-yellow img{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+.navMovil{
+    display: none;
+}
+
+@media(max-width:1124px){
+    .green-box__content-box h2{
+        font-size: 3rem;
+    }
+
+}
+@media(max-width:900px){
+    .green-box__content-box h2{
+        font-size: 1.875em;
+    }
+    .banner-images__center img{
+        height: 700px;
+    }
+    
+}
+@media only screen and (max-width:767px){
+    
+    .banner-images__center img{
+        height: 100%;
+    }
+    section.banner{
+        padding: 0;
+    }
+    section.banner .banner-images{
+        padding: 39.75px 25px 0 25px;
+    }
+    .banner-wrap{
+        flex-direction: column;
+    }
+    .banner-images{
+        width: 100%;
+    }
+    .green-box{
+        width: 100%;
+        z-index: 1;
+        padding: 0;
+        left: 0;
+        top: -40px;
+    }
+    .green-box__content-box{
+        text-align: center;
+        padding: 95px 25px 50px 25px;
+    }
+    .green-box__content-box h2{
+        width: 285px;
+    margin: 0 auto;
+    }
+    .green-box__content-box p{
+        font-size: 1.0625em;
+    }
+}

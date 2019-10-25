@@ -1,0 +1,35 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: futura-pt, sans-serif;
+    letter-spacing: 0.14em;
+    overflow-x: hidden;
+    position: relative;
+}
+h1{
+    margin:0;
+    line-height: 0;
+}
+li{
+    list-style: none;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+   
+}
+
+img{
+    width: 100px;
+}
+button{
+    border: none;
+}
