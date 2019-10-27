@@ -4,8 +4,9 @@ header{
 }
 .logo img{
     width: 215px;
-    height: 29.25px;
-       
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 header, .navbar, .social{
     display: flex;
@@ -101,13 +102,19 @@ header, .navbar, .social{
     .burger-menu{
         display: block;
         cursor: pointer;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
     }
     .burger-menu i{
         display: block;
         width: 21px;
         height: 2px;
         background-color: #415465;
-        transition: all 0.2s ease;
+        transition: all 0.2s ease-in;
     }
 
     .burger-menu i + i {

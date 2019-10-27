@@ -54,6 +54,9 @@ section {
 .lightbox-section .content:hover span::after{
     height: 15px;
 }
+
+
+
 /*
 lightbox section end
 
@@ -63,13 +66,39 @@ slider section start
     padding: 0;
     display: flex;
     align-items: stretch;
-    min-height: 600px;
+    min-height: 550px;
 }
-.slider-section .image {
-    padding: 6.875rem 3.125rem;
+.slider-section .container-izq{
+    padding: 3.125rem 6.875rem ;
     background: #edc0b2;
     width: 50%;
+}
+.slider-section .image {
+
+    width: 300%;
     position: relative; 
+    display: flex;
+
+}
+.slider-section .colizq{
+    width: 100%;
+    overflow: hidden;
+
+}
+.slider-section .image .slide{
+    width:100%;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.slider-section .image .foto1{
+    background-image: url(../img/slider1.jpg);
+}
+.slider-section .image .foto2{
+    background-image: url(../img/slider2.jpg);
+}
+.slider-section .image .foto3{
+    background-image: url(../img/slider3.jpg);
 }
 
 .slider-section .content {
@@ -115,3 +144,51 @@ slider section start
     width: 100%;
     height: 400px;
 }
+@media only screen and (max-width:1024px){
+    .slider-section .container-izq{
+        padding: 25px 55px;
+    }
+}
+@media only screen and (max-width:900px){
+    .box:nth-of-type(1){
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px){
+    .box:nth-of-type(3){
+        display: none;
+    }
+}
+@media only screen and (max-width:767px){
+    .lightbox-section{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .slider-section{
+        flex-direction: column;
+    }
+    .slider-section .image{
+        
+      padding: 0;
+    }
+    .slider-section .container-izq{
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+    }
+    .slider-section .content{
+        width: 100%;
+        padding: 75px 25px 50px 25px;
+    }
+    .slider-section .content .inner{  
+        width: 100%;
+        padding: 0;
+    }
+    .slider-section .content .inner h3{
+        font-size: 20px;
+    }
+    .slider-section .content .inner p {
+        font-size: 15px;
+    }
+}
+
